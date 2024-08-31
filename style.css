@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body{
+  height: 100%;
+  width: 100%;
+  font-family: "freight big pro";
+}
+@font-face {
+  font-family: freight big pro;
+  src: url(Freight\ Big\ Pro\ Light.otf);
+}
+@font-face {
+  font-family: Italica;
+  src: url(Freight\ Big\ Pro\ Light\ Italic.otf);
+}
+@font-face {
+  font-family: GL;
+  src: url(Gilroy-Medium.e7e7c091.ttf);
+}
+.ok {
+  font-family: italica;
+}
+#page1 i{
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  font-size: 4vw;
+  transform: rotate(180deg);
+}
+#page2 i{
+  position: absolute;
+  top:82%;
+  left: 50%;
+  font-size: 48px;
+  transform: rotate(180deg);
+}
+#loader {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 99;
+  /* display: none; */
+}
+#loader h1{
+  font-size: 6.9vw;
+  line-height: 5vw;
+  letter-spacing: -2px;
+  font-weight: 100;
+  position: relative;
+  z-index: 9;
+}
+#loader video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 6;
+}
+#yello1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f5e41b;
+  z-index: 8;
+}
+#yello2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f5e41b;
+  z-index: 7;
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5e41b;
+  text-align: center;
+}
+#page1 h1 {
+  font-size: 6.9vw;
+  line-height: 5vw;
+  letter-spacing: -2px;
+  font-weight: 100;
+
+  user-select: none;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  padding: 2.3vw 4vw;
+  z-index: 10;
+}
+#second{
+   display: flex;
+   width: full;
+   gap: 70px;
+   align-items: center;
+   justify-content: space-around;
+   text-transform: capitalize;
+   font-size: 1.1rem;
+  font-family: "GL" ;
+  font-weight: lighter !important;
+  
+}
+#navbar svg > path {
+  fill: rgb(0, 0, 0);
+}
+#page2 {
+  height: 105vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  transition: all ease 0.8s;
+}
+.moving .blur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #f5e31bf5, #f5e41b, #f5e31bf5);
+  box-shadow: 10px 0px 20px 20px #f5e41b, -10px 0px 20px 20px #f5e41b;
+  height: 100%;
+  z-index: 8;
+}
+.moving .w35 {
+  width: 35%;
+}
+.moving .w40 {
+  width: 40%;
+}
+.moving .w23 {
+  width: 23%;
+}
+.elem {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.elem h2 {
+  font-size: 7vw;
+  font-weight: 100;
+  position: relative;
+  z-index: 9;
+  line-height: 5vw;
+  user-select: none;
+}
+#h2:hover {
+  font-style: italic;
+  color: black;
+}
+.elem:hover .moving {
+  transform: translate(0, -50%) scaleY(1);
+}
+.elem .moving {
+  width: 100%;
+  white-space: nowrap;
+  padding: 5px 0;
+  background-color: #f5e41b;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%) scaleY(0);
+  transition: all ease 0.5s;
+  overflow: hidden;
+}
+.elem .moving .moving-in {
+  background-color: #f5e41b;
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: moving;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.elem .moving .moving-in h5 {
+  color: black;
+  display: inline-block;
+  font-size: 18px;
+  font-family: "GL";
+  font-weight: 100;
+  margin-right: 33px;
+  transition: all ease 0.5s;
+}
+@keyframes moving {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f2f2f200;
+}
+.image-container {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* z-index: 999 */
+  background-color:rgba(128, 128, 128, 0.3)
+}
+.image-div {
+  height: 40vw;
+  width: 30vw;
+  position: relative;
+  overflow: hidden;
+  margin: 30px 15px;
+}
+.image-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease 0.1s;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 23px;
+  font-size: 1.7vw;
+  opacity: 0;
+  transition: all ease 0.5s;
+  z-index: 99;
+  text-align: center;
+}
+.overlay h1 {
+  font-weight: 100;
+}
+.image-div:hover .overlay {
+  opacity: 1;
+}
+.image-div:hover img {
+  scale: 1.1;
+}
+.up {
+  margin-top: 22px;
+}
+#footer1 {
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 25px;
+  font-family: "GL" 
+}
+#footer1 h3 {
+  font-family: "GL";
+  cursor: pointer;
+  font-weight: 100;
+}
+#footer1 i {
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: 100;
+}
+.footer2 {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 80px;
+}
+.footerleft h2 {
+  font-size: 20px;
+  font-family: "GL";
+  font-weight: 100;
+}
+.footerright {
+  display: flex;
+  gap: 30px;
+}
+.footer2 a {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  font-family: "GL";
+  font-weight: 100;
+}
